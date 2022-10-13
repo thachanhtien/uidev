@@ -43,12 +43,35 @@ canvas {
   width: 100%;
 }
 
+.wrap-section-2 {
+  position: relative;
+}
+
+.wrap-section-2 img {
+  width: 100%;
+
+}
+
+.wrap-section-2 .content {
+  position: sticky;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80px;
+  width: 100vw;
+  text-align: center;
+}
+
+.wrap-section-2 p {
+  margin: 0;
+}
+
 .block {
   width: 100%;
 }
 
-#block1 {
-  height: 200vh;
+.wrap-section-1 {
+  height: 1500px;
   font-size: 6vw;
 }
 
@@ -56,19 +79,24 @@ canvas {
 #block3,
 #block4,
 #block5 {
-  height: 145vh;
   font-size: 4vw;
-  /* margin-top: -20vh; */
+  position: absolute;
 }
 
-.content {
-  text-align: center;
+/* #block2 p {
+  transform: translateY(-50px);
+} */
+
+.wrap-section-1 .content {
   position: sticky;
-  top: 50%;
-  transform: translateY(calc(-50%));
+  top: 50vh;
+  text-align: center;
+  transform: translateY(-50%);
 }
 
-.block p {
+
+
+p {
   margin-bottom: 24px;
   margin-top: 0;
 }
