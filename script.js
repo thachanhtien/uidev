@@ -6,7 +6,7 @@ setTimeout(() => {
   $(`#block1 .aos`).addClass("aos-animate");
 }, 4800)
 
-const frameCount = 510;
+const frameCount = 160;
 const currentFrame = (index) =>
   `images/CHH1619_360QueenStVirtualTour_Architecture_MAIN_Scrolldown_Clean${index
     .toString()
@@ -83,4 +83,4 @@ window.addEventListener("scroll", () => {
   }
 });
 
-preloadImages();
+// preloadImages();
