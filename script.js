@@ -23,7 +23,7 @@ const preloadImages = () => {
 
 const img = new Image();
 img.src = currentFrame(1);
-const windowWidth = (window.innerHeight * 2080) / 1080;
+const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
 
 canvas.width = windowWidth;
@@ -59,7 +59,7 @@ window.addEventListener("scroll", () => {
   );
 
 
-  if (scrollTop > 50 && scrollTop < 550) {
+  if (scrollTop >= 0 && scrollTop < 550) {
     addAndRemoveClass("section1", "aos-animate", "aos-out");
   } else {
     addAndRemoveClass("section1", "aos-out", "aos-animate");
