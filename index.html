@@ -1,68 +1,833 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <title>Binyan 360 Queen Street</title>
-  <link rel="stylesheet" href="./aos/style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css" />
-</head>
-
-<body>
-  <div class="loading">
-    <p>
-      <span>L</span>
-      <span>O</span>
-      <span>A</span>
-      <span>D</span>
-      <span>I</span>
-      <span>N</span>
-      <span>G</span>
-    </p>
-  </div>
-  <canvas id="images-render"></canvas>
-  <div class="container">
-    <div class="wrap-section-1" id="section1">
-      <div class="content">
-        <p class="aos aos-init" data-aos="fade-up" data-aos-duration="1000">
-          360 QUEEN STREET
-        </p>
-        <p class="aos aos-init" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-          BRISBANE
-        </p>
+  <head>
+    <title>AT website</title>
+    <link rel="stylesheet" type="text/css" href="assets/libs/fullPagejs/fullpage.css">
+    <meta name="keywords" content="AT">
+    <meta name="description" content="AT">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="assets/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/libs/menu-animation/ease.min.js"></script>
+    <script type="text/javascript" src="assets/libs/menu-animation/segment.min.js"></script>
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+  </head>
+  <body>
+    <div class="loading-container">
+      <div class="loading-wrap">
+        <div class="box">
+          <div class="water" id="water"></div>
+        </div>
+        <div class="loading">
+          <p><span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span></p>
+        </div><img src="assets/images/logoAT.png">
       </div>
     </div>
-    <div class="wrap-section-2" id="section2">
-
-      <div class="content">
-        <div class="block" id="block2">
-          <p class="aos aos-init" data-aos="fade-in" data-aos-duration="1000">
-            A NEW PERSPECTIVE FOR BRISBANE
-          </p>
-        </div>
-        <div class="block" id="block3">
-          <p class="aos aos-init" data-aos="fade-in" data-aos-duration="1000">
-            A CARBON NEUTRAL BUILDING
-          </p>
-        </div>
-        <div class="block" id="block4">
-          <p class="aos aos-init" data-aos="fade-in" data-aos-duration="1000">
-            SMART BUILDING TECHNOLOGY
-          </p>
-        </div>
-        <div class="block" id="block5">
-          <p class="aos aos-init" data-aos="fade-in" data-aos-duration="1000">
-            BIOPHILIC DESIGN
-          </p>
+    <div class="m-bg-scroll sec" style="background-image: url(assets/images/bg-pro4.png)"></div>
+    <div class="m-bg-scroll sec" style="background-image: url(assets/images/bg-pro3.png)"></div>
+    <div class="m-bg-scroll sec" style="background-image: url(assets/images/bg-pro2.png)"></div>
+    <div class="m-bg-scroll sec" style="background-image: url(assets/images/bg-pro1.png)"></div>
+    <div class="base">
+      <div class="base-wrap">
+        <div class="head-base">
+          <div class="logo"><a href="/"> <img src="assets/images/logoAT.png" alt=""></a></div>
+          <ul class="menu-des">
+            <li> <a href="viewfinder.html">works</a></li>
+            <li> <a href="javascript:void(0)">technology</a></li>
+            <li> <a href="javascript:void(0)">about me</a></li>
+            <li> <a href="javascript:void(0)">contact</a></li>
+          </ul>
+          <div class="menu-res">
+            <div id="popup-menu"></div>
+            <div class="menu-icon-wrapper fade-out" id="menu-icon-wrapper" style="visibility: hidden">
+              <button class="menu-icon-trigger" id="menu-icon-trigger"></button>
+              <svg width="1000px" height="1000px">
+                <path id="pathA" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                <path id="pathB" d="M 300 500 L 700 500"></path>
+                <path id="pathC" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+              </svg>
+            </div>
+            <div class="dummy" id="dummy">
+              <div class="dummy__item"><a class="m-link-menu no-margin" href="index.html">
+                  <div class="numb-menu">.01 </div>
+                  <div class="wrap-text-menu">
+                    <div class="line-menu"></div>
+                    <div class="text-menu">Home</div>
+                  </div></a></div>
+              <div class="dummy__item"><a class="m-link-menu no-margin" href="viewfinder.html">
+                  <div class="numb-menu">.01 </div>
+                  <div class="wrap-text-menu">
+                    <div class="line-menu"></div>
+                    <div class="text-menu">Works</div>
+                  </div></a></div>
+              <div class="dummy__item"><a class="m-link-menu" href="javascript:void(0)">
+                  <div class="numb-menu">.02</div>
+                  <div class="wrap-text-menu">
+                    <div class="line-menu"></div>
+                    <div class="text-menu">About</div>
+                  </div></a></div>
+              <div class="dummy__item"><a class="m-link-menu" href="javascript:void(0)">
+                  <div class="numb-menu">.05</div>
+                  <div class="wrap-text-menu">
+                    <div class="line-menu"></div>
+                    <div class="text-menu">Contact</div>
+                  </div></a></div>
+            </div>
+          </div>
+          <div class="bot-base">
+            <div class="mouse-scroll"><img src="assets/images/mouse-10.svg" alt=""><span>mouse scroll</span></div>
+          </div>
         </div>
       </div>
-      <img src="./media/section-2.webp" alt="">
     </div>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="./script.js"></script>
-</body>
-
+    <div class="add-body-class" data-bodyclass="home-page"></div>
+    <div class="block-banner">
+      <div class="text">
+        <div class="sub-text-home" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1000">UI DEVELOPER</div>
+        <div class="m-h1-home" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">THACH ANH TIEN</div>
+        <div class="m-h1-bg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">THACH ANH TIEN</div>
+      </div>
+    </div>
+    <div class="container-fluid block-intro">
+      <div class="container">
+        <div class="row">
+          <div class="m-weather col-12 col-md-6">
+            <div class="w-vn" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800">
+              <div class="w-icon"><img src="assets/images/w-vn.svg" width="57px"></div>
+              <div class="m-location">&lt;/saigon&gt;</div>
+              <div class="m-temp"><span class="numb">36</span><span class="type">C</span></div>
+              <div class="m-country">VIETNAM</div>
+            </div>
+            <div class="w-nw" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+              <div class="w-icon"><img src="assets/images/w-nw.svg" width="54px"></div>
+              <div class="m-location">&lt;/tokyo&gt;</div>
+              <div class="m-temp"><span class="numb">20</span><span class="type">C</span></div>
+              <div class="m-country">JAPAN</div>
+            </div>
+          </div>
+          <div class="m-intro col-12 col-md-6" data-aos="fade-up" data-aos-duration="1500">
+            <div class="m-h6">About Me</div>
+            <div class="m-h9"><span>Nearly around 06 years of experience working in information technology area. Overall understanding of Graphic Design, UX/UI, Front-end, E-Commerce, Linux,... </span></div>
+            <div class="m-body-1">I can finally determine my passion and enthusiasm for the web frontend and beyond the full stack web developer. I desire to dedicate myself to your company to satisfy this passion, to develop the company as well as improve myself.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid block-service">
+      <div class="container">
+        <div class="row" data-aos="fade-up" data-aos-duration="1500">
+          <div class="col-12">
+            <div class="title">
+              <div class="m-h2" data-text="My skill">My skill</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6" data-aos="fade-up" data-aos-duration="1500">      
+            <div class="m-h6">What I can do</div>
+            <div class="m-h9">I came from a programmer background but choose digital marketing is first job. I want to understand what a customer needs before making a product.</div>
+          </div>
+          <div class="m-intro col-12 col-md-6">
+            <div class="next-slide-intro"><img src="assets/images/next-arrow.svg" alt=""></div>
+            <div class="prev-slide-intro"><img src="assets/images/prev-arrow.svg" alt=""></div>
+            <div class="row">
+              <div class="col-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                <div class="block-img"><img src="assets/images/service-1.svg" alt="Mpire">
+                  <div class="dot-1">
+                    <svg width="37" height="39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx=".838" cy=".838" r=".838" fill="#fff"></circle>
+                      <circle cx=".839" cy="10.05" r=".838" fill="#fff"></circle>
+                      <circle cx=".839" cy="19.263" r=".838" fill="#fff"></circle>
+                      <circle cx=".839" cy="28.475" r=".838" fill="#fff"></circle>
+                      <circle cx=".839" cy="37.688" r=".838" fill="#fff"></circle>
+                      <circle cx="9.838" cy=".838" r=".838" fill="#fff"></circle>
+                      <circle cx="9.839" cy="10.05" r=".838" fill="#fff"></circle>
+                      <circle cx="9.839" cy="19.263" r=".838" fill="#fff"></circle>
+                      <circle cx="9.839" cy="28.475" r=".838" fill="#fff"></circle>
+                      <circle cx="9.839" cy="37.688" r=".838" fill="#fff"></circle>
+                      <circle cx="17.838" cy=".838" r=".838" fill="#fff"></circle>
+                      <circle cx="17.839" cy="10.05" r=".838" fill="#fff"></circle>
+                      <circle cx="17.839" cy="19.263" r=".838" fill="#fff"></circle>
+                      <circle cx="17.839" cy="28.475" r=".838" fill="#fff"></circle>
+                      <circle cx="17.839" cy="37.688" r=".838" fill="#fff"></circle>
+                      <circle cx="26.838" cy=".838" r=".838" fill="#fff"></circle>
+                      <circle cx="26.839" cy="10.05" r=".838" fill="#fff"></circle>
+                      <circle cx="26.839" cy="19.263" r=".838" fill="#fff"></circle>
+                      <circle cx="26.839" cy="28.475" r=".838" fill="#fff"></circle>
+                      <circle cx="26.839" cy="37.688" r=".838" fill="#fff"></circle>
+                      <circle cx="35.838" cy=".838" r=".838" fill="#fff"></circle>
+                      <circle cx="35.838" cy="10.05" r=".838" fill="#fff"></circle>
+                      <circle cx="35.838" cy="19.263" r=".838" fill="#fff"></circle>
+                      <circle cx="35.838" cy="28.475" r=".838" fill="#fff"></circle>
+                      <circle cx="35.838" cy="37.688" r=".838" fill="#fff"></circle>
+                    </svg>
+                  </div>
+                </div>
+                <div class="m-h5">Marketing   </div>
+                <div class="m-body-2">
+                  <ul>
+                    <li>Communication</li>
+                    <li>Public Speaking</li>
+                    <li>Negotiation</li>
+                    <li>Creativity</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800">
+                <div class="block-img"><img src="assets/images/service-2.svg" alt="Mpire">
+                  <div class="dot-2">
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="0.9" cy="20.9" r="0.9" fill="white"></circle>
+                      <circle cx="40.9" cy="20.9" r="0.9" fill="white"></circle>
+                      <circle cx="10.9" cy="20.9" r="0.9" fill="white"></circle>
+                      <circle cx="10.9" cy="10.9" r="0.9" fill="white"></circle>
+                      <circle cx="10.9" cy="30.9" r="0.9" fill="white"></circle>
+                      <circle cx="30.9" cy="20.9" r="0.9" fill="white"></circle>
+                      <circle cx="30.9" cy="10.9" r="0.9" fill="white"></circle>
+                      <circle cx="30.9" cy="30.9" r="0.9" fill="white"></circle>
+                      <circle cx="20.9" cy="20.9" r="0.9" fill="white"></circle>
+                      <circle cx="20.9" cy="10.9" r="0.9" fill="white"></circle>
+                      <circle cx="20.9" cy="0.9" r="0.9" fill="white"></circle>
+                      <circle cx="20.9" cy="30.9" r="0.9" fill="white"></circle>
+                      <circle cx="20.9" cy="40.9" r="0.9" fill="white"></circle>
+                    </svg>
+                  </div>
+                </div>
+                <div class="m-h5">Design   </div>
+                <div class="m-body-2">
+                  <ul>
+                    <li>UI & UX</li>
+                    <li>Web design</li>
+                    <li>App design</li>
+                    <li>Responsive design</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
+                <div class="block-img"><img src="assets/images/service-3.svg" alt="Mpire">
+                  <div class="dot-3">
+                    <svg width="42" height="45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="10.868" cy=".867" r=".867" fill="#fff"></circle>
+                      <circle cx="10.867" cy="11.867" r=".867" fill="#fff"></circle>
+                      <circle cx="10.867" cy="21.867" r=".867" fill="#fff"></circle>
+                      <circle cx="10.867" cy="32.697" r=".867" fill="#fff"></circle>
+                      <circle cx="10.867" cy="43.308" r=".867" fill="#fff"></circle>
+                      <circle cx=".867" cy="11.867" r=".867" fill="#fff"></circle>
+                      <circle cx=".867" cy="21.867" r=".867" fill="#fff"></circle>
+                      <circle cx=".867" cy="32.697" r=".867" fill="#fff"></circle>
+                      <circle cx="40.867" cy="11.867" r=".867" fill="#fff"></circle>
+                      <circle cx="40.867" cy="21.867" r=".867" fill="#fff"></circle>
+                      <circle cx="40.867" cy="32.697" r=".867" fill="#fff"></circle>
+                      <circle cx="20.867" cy="21.867" r=".867" fill="#fff"></circle>
+                      <circle cx="20.867" cy="32.867" r=".867" fill="#fff"></circle>
+                      <circle cx="20.867" cy="11.867" r=".867" fill="#fff"></circle>
+                      <circle cx="20.867" cy="1.112" r=".867" fill="#fff"></circle>
+                      <circle cx="20.867" cy="43.308" r=".867" fill="#fff"></circle>
+                      <circle cx="30.867" cy="21.867" r=".867" fill="#fff"></circle>
+                      <circle cx="30.867" cy="32.867" r=".867" fill="#fff"></circle>
+                      <circle cx="30.867" cy="11.867" r=".867" fill="#fff"></circle>
+                      <circle cx="30.867" cy="1.112" r=".867" fill="#fff"></circle>
+                      <circle cx="30.867" cy="43.308" r=".867" fill="#fff"></circle>
+                    </svg>
+                  </div>
+                </div>
+                <div class="m-h5">Development   </div>
+                <div class="m-body-2">
+                  <ul>
+                    <li>Web Dev</li>
+                    <li>E-commerce Dev</li>
+                    <li>Dashboard Dev</li>
+                    <li>Build server</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-4 res-in">
+                <div class="block-img"><img src="assets/images/service-1.svg" alt="Mpire">
+                  <div class="dot-1">
+                    <svg width="37" height="39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx=".838" cy=".838" r=".838" fill="#fff"></circle>
+                      <circle cx=".839" cy="10.05" r=".838" fill="#fff"></circle>
+                      <circle cx=".839" cy="19.263" r=".838" fill="#fff"></circle>
+                      <circle cx=".839" cy="28.475" r=".838" fill="#fff"></circle>
+                      <circle cx=".839" cy="37.688" r=".838" fill="#fff"></circle>
+                      <circle cx="9.838" cy=".838" r=".838" fill="#fff"></circle>
+                      <circle cx="9.839" cy="10.05" r=".838" fill="#fff"></circle>
+                      <circle cx="9.839" cy="19.263" r=".838" fill="#fff"></circle>
+                      <circle cx="9.839" cy="28.475" r=".838" fill="#fff"></circle>
+                      <circle cx="9.839" cy="37.688" r=".838" fill="#fff"></circle>
+                      <circle cx="17.838" cy=".838" r=".838" fill="#fff"></circle>
+                      <circle cx="17.839" cy="10.05" r=".838" fill="#fff"></circle>
+                      <circle cx="17.839" cy="19.263" r=".838" fill="#fff"></circle>
+                      <circle cx="17.839" cy="28.475" r=".838" fill="#fff"></circle>
+                      <circle cx="17.839" cy="37.688" r=".838" fill="#fff"></circle>
+                      <circle cx="26.838" cy=".838" r=".838" fill="#fff"></circle>
+                      <circle cx="26.839" cy="10.05" r=".838" fill="#fff"></circle>
+                      <circle cx="26.839" cy="19.263" r=".838" fill="#fff"></circle>
+                      <circle cx="26.839" cy="28.475" r=".838" fill="#fff"></circle>
+                      <circle cx="26.839" cy="37.688" r=".838" fill="#fff"></circle>
+                      <circle cx="35.838" cy=".838" r=".838" fill="#fff"></circle>
+                      <circle cx="35.838" cy="10.05" r=".838" fill="#fff"></circle>
+                      <circle cx="35.838" cy="19.263" r=".838" fill="#fff"></circle>
+                      <circle cx="35.838" cy="28.475" r=".838" fill="#fff"></circle>
+                      <circle cx="35.838" cy="37.688" r=".838" fill="#fff"></circle>
+                    </svg>
+                  </div>
+                </div>
+                <div class="m-h5">Strategy   </div>
+                <div class="m-body-2">
+                  <ul>
+                    <li>Product strategy</li>
+                    <li>Report & Analysis</li>
+                    <li>Primary Research</li>
+                    <li>Secondary Research</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-4 res-in">
+                <div class="block-img"><img src="assets/images/service-2.svg" alt="Mpire">
+                  <div class="dot-2">
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="0.9" cy="20.9" r="0.9" fill="white"></circle>
+                      <circle cx="40.9" cy="20.9" r="0.9" fill="white"></circle>
+                      <circle cx="10.9" cy="20.9" r="0.9" fill="white"></circle>
+                      <circle cx="10.9" cy="10.9" r="0.9" fill="white"></circle>
+                      <circle cx="10.9" cy="30.9" r="0.9" fill="white"></circle>
+                      <circle cx="30.9" cy="20.9" r="0.9" fill="white"></circle>
+                      <circle cx="30.9" cy="10.9" r="0.9" fill="white"></circle>
+                      <circle cx="30.9" cy="30.9" r="0.9" fill="white"></circle>
+                      <circle cx="20.9" cy="20.9" r="0.9" fill="white"></circle>
+                      <circle cx="20.9" cy="10.9" r="0.9" fill="white"></circle>
+                      <circle cx="20.9" cy="0.9" r="0.9" fill="white"></circle>
+                      <circle cx="20.9" cy="30.9" r="0.9" fill="white"></circle>
+                      <circle cx="20.9" cy="40.9" r="0.9" fill="white"></circle>
+                    </svg>
+                  </div>
+                </div>
+                <div class="m-h5">Design   </div>
+                <div class="m-body-2">
+                  <ul>
+                    <li>UI & UX</li>
+                    <li>Web design</li>
+                    <li>App design</li>
+                    <li>Responsive design</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-4 res-in">
+                <div class="block-img"><img src="assets/images/service-3.svg" alt="Mpire">
+                  <div class="dot-3">
+                    <svg width="42" height="45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="10.868" cy=".867" r=".867" fill="#fff"></circle>
+                      <circle cx="10.867" cy="11.867" r=".867" fill="#fff"></circle>
+                      <circle cx="10.867" cy="21.867" r=".867" fill="#fff"></circle>
+                      <circle cx="10.867" cy="32.697" r=".867" fill="#fff"></circle>
+                      <circle cx="10.867" cy="43.308" r=".867" fill="#fff"></circle>
+                      <circle cx=".867" cy="11.867" r=".867" fill="#fff"></circle>
+                      <circle cx=".867" cy="21.867" r=".867" fill="#fff"></circle>
+                      <circle cx=".867" cy="32.697" r=".867" fill="#fff"></circle>
+                      <circle cx="40.867" cy="11.867" r=".867" fill="#fff"></circle>
+                      <circle cx="40.867" cy="21.867" r=".867" fill="#fff"></circle>
+                      <circle cx="40.867" cy="32.697" r=".867" fill="#fff"></circle>
+                      <circle cx="20.867" cy="21.867" r=".867" fill="#fff"></circle>
+                      <circle cx="20.867" cy="32.867" r=".867" fill="#fff"></circle>
+                      <circle cx="20.867" cy="11.867" r=".867" fill="#fff"></circle>
+                      <circle cx="20.867" cy="1.112" r=".867" fill="#fff"></circle>
+                      <circle cx="20.867" cy="43.308" r=".867" fill="#fff"></circle>
+                      <circle cx="30.867" cy="21.867" r=".867" fill="#fff"></circle>
+                      <circle cx="30.867" cy="32.867" r=".867" fill="#fff"></circle>
+                      <circle cx="30.867" cy="11.867" r=".867" fill="#fff"></circle>
+                      <circle cx="30.867" cy="1.112" r=".867" fill="#fff"></circle>
+                      <circle cx="30.867" cy="43.308" r=".867" fill="#fff"></circle>
+                    </svg>
+                  </div>
+                </div>
+                <div class="m-h5">Strategy   </div>
+                <div class="m-body-2">
+                  <ul>
+                    <li>Web Dev</li>
+                    <li>E-commerce Dev</li>
+                    <li>Bespoke Dev</li>
+                    <li>Mobile app</li>
+                    <li>Desktop app</li>
+                    <li>CMS Implementation</li>
+                    <li>API Intergrations</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block-project-home">
+      <div class="wrap-content-project container">
+        <div class="row block-content-project block-aos-1" data-aos="fade-0" data-aos-offset="500" data-aos-anchor=".sec-project1">
+          <div class="col-12 col-lg-6 block-left">
+            <div class="m-content">
+              <div class="overflow-hidden">
+                <div class="m-h9" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project1">Novelda AS - The company behind XETHRU technology</div>
+              </div>
+              <div class="overflow-hidden">
+                <div class="sub-h3" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project1">WEB DESIGN  |   DEVELOPMENT</div>
+              </div>
+              <div class="overflow-hidden">
+                <div class="m-body-1" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project1">Novelda AS is a privately held, R&D driven, sensor company based in Norway and specializing in nanoscale wireless low-power technology for ultra-high resolution impulse radar.</div>
+              </div>
+              <div class="overflow-hidden"><a class="m-btn" href="viewfinder.html" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project1"><img src="assets/images/arrow-right.svg" alt=""><span class="sub-h3">view case study</span></a></div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 order-1 order-lg-2 block-right">
+            <div class="sec-project" id="scene1" data-aos="fade-up" data-aos-offset="500" data-aos-duration="500" data-aos-anchor=".sec-project1" data-aos-delay="200">
+              <div class="layer layer-1" data-depth="0.2" data-hover-only="true"><img src="assets/images/pro1-laptop.png"></div>
+              <div class="layer layer-2" data-depth="0.4" data-hover-only="true"><img src="assets/images/pro1-chip.png"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row block-content-project block-aos-2" data-aos="fade-0" data-aos-offset="500" data-aos-anchor=".sec-project2">
+          <div class="col-12 col-lg-6 block-left">
+            <div class="m-content">
+              <div class="overflow-hidden">
+                <div class="m-h9" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project2">BizDirect - Market Intelligence Data</div>
+              </div>
+              <div class="overflow-hidden">
+                <div class="sub-h3" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project2">PLATFORM DESIGN   |   DEVELOPMENT</div>
+              </div>
+              <div class="overflow-hidden">
+                <div class="m-body-1" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project2">BizDirect is one of the very first B2B database providers in South East Asia. They use AI-powered technology and an army of researchers to track, monitor and analyse millions of companies across the region.</div>
+              </div>
+              <div class="overflow-hidden"><a class="m-btn" href="viewfinder.html" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project2"><img src="assets/images/arrow-right.svg" alt=""><span class="sub-h3">view case study</span></a></div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 order-1 order-lg-2 block-right">
+            <div class="sec-project" id="scene2" data-aos="fade-up" data-aos-offset="500" data-aos-duration="500" data-aos-anchor=".sec-project2" data-aos-delay="200">
+              <div class="layer layer-1" data-depth="0.5"><img src="assets/images/pro2-laptop.png"></div>
+              <div class="layer layer-2" data-depth="1"><img src="assets/images/pro2-biz.png"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row block-content-project block-aos-3" data-aos="fade-0" data-aos-offset="500" data-aos-anchor=".sec-project3">
+          <div class="col-12 col-lg-6 block-left">
+            <div class="m-content">
+              <div class="overflow-hidden">
+                <div class="m-h9" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project3">Viewfinder - An eye for inspiration</div>
+              </div>
+              <div class="overflow-hidden">
+                <div class="sub-h3" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project3">WEB DESIGN  |   DEVELOPMENT</div>
+              </div>
+              <div class="overflow-hidden">
+                <div class="m-body-1" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project3">Viewfinder brings creative concepts to life by offering a full-range of pre-production, production, and post-production services, cutting-edge technology, and the ability to customise solutions to meet any budget or timeline of the clients.</div>
+              </div>
+              <div class="overflow-hidden"><a class="m-btn" href="viewfinder.html" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project3"><img src="assets/images/arrow-right.svg" alt=""><span class="sub-h3">view case study</span></a></div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 order-1 order-lg-2 block-right">
+            <div class="sec-project" id="scene3" data-aos="fade-up" data-aos-offset="500" data-aos-duration="500" data-aos-anchor=".sec-project3" data-aos-delay="200">
+              <div class="layer layer-1" data-depth="0.5"><img src="assets/images/pro3-laptop.png"></div>
+              <div class="layer layer-2" data-depth="1"><img src="assets/images/pro3-camera.png"></div>
+              <div class="layer layer-3" data-depth="1"><img src="assets/images/pro3-circle.png"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row block-content-project block-aos-4" data-aos="fade-0" data-aos-offset="500" data-aos-anchor=".sec-project4">
+          <div class="col-12 col-lg-6 block-left">
+            <div class="m-content">
+              <div class="overflow-hidden">
+                <div class="m-h9" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project4">ONiO - Transform how you care for your family</div>
+              </div>
+              <div class="overflow-hidden">
+                <div class="sub-h3" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project4">WEB DEVELOPMENT</div>
+              </div>
+              <div class="overflow-hidden">
+                <div class="m-body-1" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project4">Headquartered in Oslo, Norway, ONiO® provides the educational, personal & professional markets with innovative medical technology solutions. ONiO is dedicated to making the best healthcare products by trying to understand the complexities of life and challenge the way we record, practice and ultimately understand healthcare.</div>
+              </div>
+              <div class="overflow-hidden"><a class="m-btn" href="viewfinder.html" data-aos="fade-up" data-aos-duration="500" data-aos-offset="500" data-aos-anchor=".sec-project4"><img src="assets/images/arrow-right.svg" alt=""><span class="sub-h3">view case study</span></a></div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 order-1 order-lg-2 order-1 block-right">
+            <div class="sec-project" id="scene4" data-aos="fade-up" data-aos-offset="500" data-aos-duration="500" data-aos-anchor=".sec-project4" data-aos-delay="200">
+              <div class="layer layer-1" data-depth="0.5" data-hover-only="true"><img src="assets/images/pro4-laptop.png"></div>
+              <div class="layer layer-2" data-depth="1" data-hover-only="true"><img src="assets/images/pro4-onio.png"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sec-for-load">
+        <div class="sec-load secForBG sec-project1" data-id="dot1"></div>
+        <div class="sec-load secForBG sec-project2" data-id="dot2"></div>
+        <div class="sec-load secForBG sec-project3" data-id="dot3"></div>
+        <div class="sec-load secForBG sec-project4" data-id="dot4"></div>
+        <div class="menu-left-project">
+          <div class="rotate-90">
+            <div class="dot-wrap">
+              <div class="dot" id="dot1"></div>
+              <div class="dot" id="dot2"></div>
+              <div class="dot" id="dot3"></div>
+              <div class="dot" id="dot4"></div>
+            </div><a class="text" href="javascript:;">RECENT WORKS</a>
+          </div>
+        </div>
+        <div class="menu-right-project">
+          <div class="rotate-90">
+            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="2.33333" height="2.33333" fill="#0cbaba"></rect>
+              <rect x="4.66666" width="2.33333" height="2.33333" fill="#0cbaba"></rect>
+              <rect y="4.66667" width="2.33333" height="2.33333" fill="#0cbaba"></rect>
+              <rect x="4.66666" y="4.66667" width="2.33333" height="2.33333" fill="#0cbaba"></rect>
+            </svg><a class="btn-all-project" href="javascript:void(0)">SEE ALL PROJECT</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block-banner-bot" style="background-image:url(assets/images/bg-bot.jpg)" data-aos="fade-in" data-aos-duration="2000">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="content-banner-bot">"You're never a loser<Br> until you quit trying"</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="start-project">
+      <div class="m-h1-bg" data-aos="fade-up" data-aos-duration="1000">SAY HELLO!</div>
+      <div class="sub-text-footer" data-aos="fade-down" data-aos-duration="1000">Let’s start a project!</div><a class="btn-start-project" href="javascript:void(0);" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="600">
+        <svg width="180" height="62">
+          <defs>
+            <lineargradient id="grad1">
+              <stop offset="0%" stop-color="#fff"></stop>
+              <stop offset="100%" stop-color="#fff"></stop>
+            </lineargradient>
+          </defs>
+          <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="170" height="50"></rect>
+        </svg><span>Download Resume</span></a>
+    </div>
+    <div class="foot-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-3 foot-1" data-aos="fade-right-3" data-aos-duration="2000" data-aos-delay="0" data-aos-offset="-500">
+            <div class="copyright-foot country-foot">© 2020 AT</div>
+            <div class="add-foot-wrap"><span class="copyright-foot add-foot">All rights Reserved</span></div>
+          </div>
+          <div class="col-12 col-md-3 foot-2" data-aos="fade-right-3" data-aos-duration="2000" data-aos-delay="100" data-aos-offset="-500"></div>
+          <div class="col-6 col-md-3 foot-3" data-aos="fade-right-3" data-aos-duration="2000" data-aos-delay="200" data-aos-offset="-500"></div>
+          <div class="col-6 col-md-3 foot-4" data-aos="fade-right-3" data-aos-duration="2000" data-aos-delay="300" data-aos-offset="-500">
+            <div class="copyright-foot country-foot">CONTACT ME</div>
+            <div class="copyright-foot">thachanhtien.92@gmail.com<br>+84 932 101 200</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="assets/libs/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="assets/libs/slick/slick.js"></script>
+  <script type="text/javascript" src="assets/libs/aos/aos.js"></script>
+  <script type="text/javascript" src="assets/libs/bootstrap/bootstrap.js"></script>
+  <script type="text/javascript" src="assets/libs/menu-animation/main.js"></script><script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js'></script>
+  <script type="text/javascript" src="assets/libs/jquery.easeScroll.js"></script>
+  <script type="text/javascript" src="assets/js/javascript.js"></script>
+  <script type="text/javascript" src="assets/libs/parallax.js"></script>
+  <script type="text/javascript" src="assets/js/home.js"></script>
+  <script type="text/javascript" src="assets/libs/threejs/three-vopt2.min.js"></script>
+  <script type="text/javascript" src="assets/libs/threejs/GeometryUtils.js"></script>
+  <script type="text/javascript" src="assets/libs/threejs/MTLLoader.js"></script>
+  <script type="text/javascript" src="assets/libs/threejs/OBJLoader.js"></script>
+  <script id="vs-raw-sim" type="x-shader/x-vertex">
+    precision highp float;
+    precision highp int;
+    
+    attribute vec3 position;
+    attribute vec2 uv;
+    
+    varying vec2 vUV;
+    
+    void main() 
+    {
+        vUV = uv;
+        gl_Position = vec4( position, 1.0 );
+    }
+    
+  </script>
+  <script id="fs-raw-sim" type="x-shader/x-fragment">
+    #define M_PI    3.14159265358979323846264338327950
+    #define M_2PI   6.28318530717958647692528676655900
+    #define M_PI2   1.57079632679489661923132169163975
+    
+    precision highp float;
+    precision highp int;
+    
+    uniform sampler2D tPrevPos;
+    uniform sampler2D tCurrPos;
+    uniform sampler2D tInitPos; // pos given by init random points in model triangles
+    
+    uniform float uDeltaT;  // value given by fixed update (based on time, not frame)
+    uniform float uTime;
+    uniform vec3 uMousePos;
+    varying vec2 vUV;
+    vec4 _mod289(vec4 x)
+    {
+    return x - floor(x * (1.0 / 289.0)) * 289.0;
+    }
+    
+    vec3 _mod289(vec3 x)
+    {
+        return x - floor(x * (1.0 / 289.0)) * 289.0;
+    }
+    
+    vec2 _mod289(vec2 x)
+    {
+        return x - floor(x * (1.0 / 289.0)) * 289.0;
+    }
+    
+    float _mod289(float x)
+    {
+        return x - floor(x * (1.0 / 289.0)) * 289.0;
+    }
+    
+    vec4 _permute(vec4 x)
+    {
+        return _mod289(((x*34.0)+1.0)*x);
+    }
+    
+    vec3 _permute(vec3 x)
+    {
+        return _mod289(((x*34.0)+1.0)*x);
+    }
+    
+    float _permute(float x)
+    {
+        return _mod289(((x*34.0)+1.0)*x);
+    }
+    
+    vec4 _taylorInvSqrt(vec4 r)
+    {
+        return 1.79284291400159 - 0.85373472095314 * r;
+    }
+    
+    float _taylorInvSqrt(float r)
+    {
+        return 1.79284291400159 - 0.85373472095314 * r;
+    }
+    
+    vec4 _grad4(float j, vec4 ip)
+    {
+        const vec4 ones = vec4(1.0, 1.0, 1.0, -1.0);
+        vec4 p,s;
+    
+        p.xyz = floor( fract (vec3(j) * ip.xyz) * 7.0) * ip.z - 1.0;
+        p.w = 1.5 - dot(abs(p.xyz), ones.xyz);
+        s = vec4(lessThan(p, vec4(0.0)));
+        p.xyz = p.xyz + (s.xyz*2.0 - 1.0) * s.www;
+    
+        return p;
+    }
+    
+    float snoise(vec2 v)
+    {
+        const vec4 C = vec4(0.211324865405187,  
+        // (3.0-sqrt(3.0))/6.0
+            0.366025403784439,  
+        // 0.5*(sqrt(3.0)-1.0)
+        -0.577350269189626,  
+        // -1.0 + 2.0 * C.x
+            0.024390243902439); 
+        // 1.0 / 41.0
+        // First corner
+        vec2 i  = floor(v + dot(v, C.yy) );
+        vec2 x0 = v -   i + dot(i, C.xx);
+    
+        // Other corners
+        vec2 i1;
+        i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+        vec4 x12 = x0.xyxy + C.xxzz;
+        x12.xy -= i1;
+    
+        // Permutations
+        i = _mod289(i); // Avoid truncation effects in permutation
+        vec3 p = _permute( _permute( i.y + vec3(0.0, i1.y, 1.0 )) + i.x + vec3(0.0, i1.x, 1.0 ));
+    
+        vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy), dot(x12.zw,x12.zw)), 0.0);
+        m = m*m ;
+        m = m*m ;
+    
+        // Gradients: 41 points uniformly over a line, mapped onto a diamond.
+        // The ring size 17*17 = 289 is close to a multiple of 41 (41*7 = 287)
+        vec3 x = 2.0 * fract(p * C.www) - 1.0;
+        vec3 h = abs(x) - 0.5;
+        vec3 ox = floor(x + 0.5);
+        vec3 a0 = x - ox;
+    
+        m *= 1.79284291400159 - 0.85373472095314 * ( a0*a0 + h*h );
+    
+        // Compute final noise value at P
+        vec3 g;
+        g.x  = a0.x  * x0.x  + h.x  * x0.y;
+        g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+        return 130.0 * dot(m, g);
+    }
+    
+    float snoise(vec3 v)
+    {
+        const vec2  C = vec2(1.0/6.0, 1.0/3.0) ;
+        const vec4  D = vec4(0.0, 0.5, 1.0, 2.0);
+    
+        // First corner
+        vec3 i  = floor(v + dot(v, C.yyy) );
+        vec3 x0 =   v - i + dot(i, C.xxx) ;
+    
+        // Other corners
+        vec3 g = step(x0.yzx, x0.xyz);
+        vec3 l = 1.0 - g;
+        vec3 i1 = min( g.xyz, l.zxy );
+        vec3 i2 = max( g.xyz, l.zxy );
+        vec3 x1 = x0 - i1 + C.xxx;
+        vec3 x2 = x0 - i2 + C.yyy; // 2.0*C.x = 1/3 = C.y
+        vec3 x3 = x0 - D.yyy;      // -1.0+3.0*C.x = -0.5 = -D.y
+    
+        // Permutations
+        i = _mod289(i);
+        vec4 p = _permute( _permute( _permute(
+            i.z + vec4(0.0, i1.z, i2.z, 1.0 ))
+                + i.y + vec4(0.0, i1.y, i2.y, 1.0 ))
+                + i.x + vec4(0.0, i1.x, i2.x, 1.0 ));
+    
+        // Gradients: 7x7 points over a square, mapped onto an octahedron.
+        // The ring size 17*17 = 289 is close to a multiple of 49 (49*6 = 294)
+        float n_ = 0.142857142857; // 1.0/7.0
+        vec3  ns = n_ * D.wyz - D.xzx;
+        vec4 j = p - 49.0 * floor(p * ns.z * ns.z);  //  mod(p,7*7)
+        vec4 x_ = floor(j * ns.z);
+        vec4 y_ = floor(j - 7.0 * x_ );    // mod(j,N)
+        vec4 x = x_ *ns.x + ns.yyyy;
+        vec4 y = y_ *ns.x + ns.yyyy;
+        vec4 h = 1.0 - abs(x) - abs(y);
+        vec4 b0 = vec4( x.xy, y.xy );
+        vec4 b1 = vec4( x.zw, y.zw );
+        vec4 s0 = floor(b0)*2.0 + 1.0;
+        vec4 s1 = floor(b1)*2.0 + 1.0;
+        vec4 sh = -step(h, vec4(0.0));
+        vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy ;
+        vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww ;
+        vec3 p0 = vec3(a0.xy,h.x);
+        vec3 p1 = vec3(a0.zw,h.y);
+        vec3 p2 = vec3(a1.xy,h.z);
+        vec3 p3 = vec3(a1.zw,h.w);
+    
+        //Normalise gradients
+        vec4 norm = _taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2, p2), dot(p3,p3)));
+        p0 *= norm.x;
+        p1 *= norm.y;
+        p2 *= norm.z;
+        p3 *= norm.w;
+    
+        // Mix final noise value
+        vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
+        m = m * m;
+        return 42.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1),
+            dot(p2,x2), dot(p3,x3) ) );
+    }
+    vec3 snoiseVec3( vec3 x ){
+        float s  = snoise(vec3( x ));
+        float s1 = snoise(vec3( x.y - 19.1 , x.z + 33.4 , x.x + 47.2 ));
+        float s2 = snoise(vec3( x.z + 74.2 , x.x - 124.5 , x.y + 99.4 ));
+        vec3 c = vec3( s , s1 , s2 );
+        return c;
+    
+    }
+    float rand(vec2 seed) {
+        return fract(sin(dot(seed.xy,vec2(12.9898,78.233))) * 43758.5453);
+    }
+    void main() 
+    {
+        vec3 prevPos = texture2D(tPrevPos, vUV).rgb;
+        vec3 currPos = texture2D(tCurrPos, vUV).rgb;
+        vec3 vel = (currPos - prevPos) / uDeltaT;
+        vec3 acc = vec3(0.0);
+    
+        // simulation part
+        vec3 initPos = texture2D(tInitPos, vUV).rgb;
+        vec3 dir = initPos - currPos;
+        float dist = length(dir);
+        dir /= dist;
+    
+        // add acc pattern
+        float radius = vUV.y;
+        float theta = vUV.x * M_2PI;
+        float randVal = rand(vec2(theta, radius));
+        radius += randVal * 0.5;
+        theta += randVal * 0.5;
+        float radialArms = sin(0.7 * theta);
+        vec3 inputForceDir = currPos - uMousePos;
+        float force2 = dot(inputForceDir, inputForceDir);
+        float force = sqrt(force2);
+        acc =  0.5 * dir * dist * (radialArms / 2.0 + 0.5) * randVal;
+        if (force < 20.0)
+        {
+            acc += 20.0 * inputForceDir / force * (10.0 / force + 0.001);
+        }
+    
+        // apply updates
+        vel = K_VEL_DECAY * vel + acc * uDeltaT + 0.01 * snoiseVec3(prevPos + vec3(uTime)) ;
+        currPos += vel * uDeltaT;
+    
+        gl_FragColor = vec4(currPos, 1.0);
+    }
+    
+    
+    
+  </script>
+  <script id="vs-particles" type="x-shader/x-vertex">
+    #define PS_CAM_MAX_DIST 12.0
+    attribute vec2 uvIdx;
+    uniform sampler2D tPos; 
+    uniform float uPointSize;
+    uniform float uTime;
+    varying vec3 vNormal;
+    varying vec2 vUV;
+    
+    void main()
+    {
+        vec3 pos = texture2D(tPos, uvIdx).xyz;
+    
+    
+        vec3 camToPos = pos - cameraPosition;
+        float camDist = length(camToPos);
+    
+        vNormal = normalMatrix * normal;
+        vUV = uv;
+    
+        gl_PointSize = max( uPointSize * PS_CAM_MAX_DIST / camDist, 1.0 );
+    
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+    }
+    
+  </script>
+  <script id="fs-particles" type="x-shader/x-fragment">
+    #define M_PI    3.14159265358979323846264338327950
+    #define M_2PI   6.28318530717958647692528676655900
+    #define M_PI2   1.57079632679489661923132169163975
+    varying vec3 vNormal;
+    varying vec2 vUV;
+    uniform float uAlpha;
+    uniform sampler2D tDiffuse;
+    void main() 
+    {
+        // dist
+        float alpha = 1.0 - min ( 1.0, 2.0 * length(gl_PointCoord - vec2(0.5, 0.5)) );
+    
+        if (alpha <= 0.0)
+        {
+            discard;
+        }
+        vec3 color = mix( vec3(1.0, 0.0, 0.0) , vec3(0.0, 0.0, 0.0) , alpha );
+        gl_FragColor = vec4( color, uAlpha * alpha );
+    }   
+    
+  </script>
+  <script type="text/javascript" src="assets/libs/threejs/App.js"></script>
+  <script type="text/javascript" src="assets/libs/threejs/Simulation.js"></script>
+  <script type="text/javascript" src="assets/libs/threejs/index-opt2.js"></script>
 </html>
